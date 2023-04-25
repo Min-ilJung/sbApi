@@ -71,10 +71,10 @@ API 관리
 - Docker for window(https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
 ### DB 접속정보
-mysql
+mysql 
 
 ### Local DB
-Local DB 구성
+Local DB 구성 world 데이터베이스 생성.
 
 ### openjdk 1.11 설치
 Open JDK 설치
