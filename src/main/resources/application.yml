@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: ${PROFILE}
+  mvc:
+    throw-exception-if-no-handler-found: true
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://localhost:3306/world?zuseUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: root
+    password: alslfl0)
+
+mybatis:
+  type-aliases-package: com.xe.api.application.**.dto,
+  type-handlers-package: com.xe.api.application.**.dto
+  mapper-locations: sqlmap/*_SQL.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: NULL
+
+logging:
+  pattern:
+    console: "[%d{HH:mm:ss}][%-5level][%logger.%method:line%line] - %msg%n"
+  level:
+    jdbc:
+      sqlonly: OFF
+      sqltiming: DEBUG
+      audit: OFF
+      resultset: OFF
+      resultsettable: DEBUG
+      connection: OFF
+server:
+  port: 8081
